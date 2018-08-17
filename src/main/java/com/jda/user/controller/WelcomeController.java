@@ -4,13 +4,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 public class WelcomeController {
 
+	private static final Logger logger = Logger.getLogger(WelcomeController.class);
+
 	@RequestMapping(value = "/welcome")
 	 public ModelAndView showWelcome(HttpServletRequest request, HttpServletResponse response) {
+		
+		if(logger.isDebugEnabled()){
+			logger.debug("getWelcome is executed!");
+		}
+		
+		//logs exception
+		logger.error("This is Error message", new Exception("Testing"));
+		
 		HttpSession session = request.getSession();
 		String firstname=(String) session.getAttribute("name");
 		System.out.println(firstname);
