@@ -28,4 +28,5 @@
         <property name="username" value="u1000206" />
         <property name="password" value="BcNBu1fPXg" />
     </bean>
+    <bean id = "validateUser" class = "com.jda.user.ValidateUser.ValidateUser"></bean>
 	</beans>

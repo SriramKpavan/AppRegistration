@@ -15,6 +15,8 @@
                         <td>
                             <form:input path="email" name="email" id="email" />
                         </td>
+                        <td>
+                        <form:errors path= "email" name="email" id="email"/>                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -22,6 +24,9 @@
                         </td>
                         <td>
                             <form:password path="password" name="password" id="password" />
+                        </td>
+                        <td>
+                        <form:errors path= "password"/>
                         </td>
                     </tr>
                     <tr>
@@ -31,6 +36,9 @@
                         <td>
                             <form:input path="name" name="name" id="name" />
                         </td>
+                        <td>
+                        <form:errors path= "name"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -38,6 +46,9 @@
                         </td>
                         <td>
                             <form:input path="mobile" name="mobile" id="mobile" />
+                        </td>
+                        <td>
+                        <form:errors path= "mobile"/>
                         </td>
                     </tr>
                     <tr>
