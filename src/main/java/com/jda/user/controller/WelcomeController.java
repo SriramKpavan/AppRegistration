@@ -5,9 +5,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class WelcomeController {
 
 	private static final Logger logger = Logger.getLogger(WelcomeController.class);
@@ -23,8 +25,8 @@ public class WelcomeController {
 		logger.error("This is Error message", new Exception("Testing"));
 		
 		HttpSession session = request.getSession();
-		String firstname=(String) session.getAttribute("name");
+		String firstname=(String) session.getAttribute("username");
 		System.out.println(firstname);
-		return new ModelAndView("welcome","name",firstname);
+		return new ModelAndView("welcome","username",firstname);
 	}
 }

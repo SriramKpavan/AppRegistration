@@ -37,6 +37,11 @@
                         <td><a href="/AppRegistration/register">Register</a>
                         </td>
                     </tr>
+                     <tr>
+                        <td></td>
+                        <td><a href="/AppRegistration/forgotPassword">forgot Password?</a>
+                        </td>
+                    </tr>
                 </table>
             </form:form>
             <table align="center">
